@@ -1,0 +1,46 @@
+.box {
+    width: $boxSize;
+    height: 3.4em;
+    margin: 0 auto;
+    margin-top: -0.88em;
+
+    border-top-left-radius: 2em 6em;
+    border-top-right-radius: 2em 6em;
+    border-bottom-left-radius: 3em 0.25em;
+    border-bottom-right-radius: 3em 0.25em;
+
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(lighten($box, 25%)), color-stop(0.20, lighten($box, 8%)), color-stop(0.8, $box), to(darken($box, 10%)));
+    background-image: -webkit-linear-gradient(lighten($box, 25%) 0%, lighten($box, 8%) 20%, $box 80%, darken($box, 10%));
+    background-image: -moz-linear-gradient(lighten($box, 25%) 0%, lighten($box, 8%) 20%, $box 80%, darken($box, 10%));
+    background-image: -o-linear-gradient(lighten($box, 25%) 0%, lighten($box, 8%) 20%, $box 80%, darken($box, 10%));
+    background-image: linear-gradient(lighten($box, 25%) 0%, lighten($box, 8%) 20%, $box 80%, darken($box, 10%));
+
+    box-shadow: 0 -0.1em 0 lighten($box, 13%),
+                0 -0.14em 0 lighten($box, 9%),
+                0 -0.18em 0 lighten($box, 5%),
+                0 -0.35em 0 $box,
+                0 0.3em 0 lighten($box, 13%),
+                0 0.5em 0 lighten($box, 10%),
+                inset 0 0.02em 0.3em rgba(white, 0.2);
+}
+
+.box .hook {
+    width: 0.3em;
+    height: 0;
+    float: left;
+
+    border-bottom: 0.8em solid lighten($box, 18%);
+    border-left: 0.1em solid transparent;
+    border-right: 0.05em solid transparent;
+
+    position: relative;
+    margin-top: -0.9em;
+    margin-left: 1.2em;
+
+    &:last-child {
+        float: right;
+        margin-right: 1.2em;
+        border-left: 0.05em solid transparent;
+        border-right: 0.1em solid transparent;
+    }
+}

@@ -1,0 +1,26 @@
+/**
+ *
+ *	Rotary Phone CSS File
+ *  @author Daviga404
+ *
+ */
+
+// Fonts
+@import "modules/fonts";
+
+// Variables
+@import "modules/colours";
+@import "modules/sizes";
+
+// CSS Reset
+@import "vendor/reset";
+
+// Styles
+@import "partials/base"; 	 // Base CSS, i.e. .rotary-phone
+@import "partials/receiver"; // Phone receiver (the "phone" part)
+@import "partials/box"; 	 // The phone "box" & hook (where the dialpad and spinner are attached to)
+@import "partials/keypad";   // The keypad (with the numbers)
+@import "partials/spinner";  // The spinner (the plastic section used to select the numbers)
+@import "partials/clip";     // The clip that points to numbers.
+@import "partials/light";    // The light on the ph- wait, why is there a light?!?!
+@import "partials/feet";	 // The feet of the box

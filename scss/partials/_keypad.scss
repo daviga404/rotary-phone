@@ -1,0 +1,124 @@
+.box .keypad {
+    position: relative;
+    top: 0.1em;
+    width: $boxSize / 5 * 4;
+    height: 2.9em;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 0.04em solid transparent;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from($box), color-stop(0.2, lighten($box, 15%)), color-stop(0.4, lighten($box, 45%)), color-stop(0.6, lighten($box, 15%)), color-stop(0.75, lighten($box, 20%)), color-stop(0.8, lighten($box, 60%)), color-stop(0.85, lighten($box, 20%)), to($box));
+    background-image: -webkit-linear-gradient($box, lighten($box, 15%) 20%, lighten($box, 45%) 40%, lighten($box, 15%) 60%, lighten($box, 20%) 75%, lighten($box, 60%) 80%, lighten($box, 20%) 85%, $box);
+    background-image: -moz-linear-gradient($box, lighten($box, 15%) 20%, lighten($box, 45%) 40%, lighten($box, 15%) 60%, lighten($box, 20%) 75%, lighten($box, 60%) 80%, lighten($box, 20%) 85%, $box);
+    background-image: -o-linear-gradient($box, lighten($box, 15%) 20%, lighten($box, 45%) 40%, lighten($box, 15%) 60%, lighten($box, 20%) 75%, lighten($box, 60%) 80%, lighten($box, 20%) 85%, $box);
+    background-image: linear-gradient($box, lighten($box, 15%) 20%, lighten($box, 45%) 40%, lighten($box, 15%) 60%, lighten($box, 20%) 75%, lighten($box, 60%) 80%, lighten($box, 20%) 85%, $box);
+    box-shadow: 0 0.05em 0.05em black,
+                inset -999px 0 0 $box;
+    font-family: $font-stack;
+    color: $numbers;
+}
+
+.box .keypad .number .letter,
+.box .keypad .number .num {
+    font-size: 0.2em;
+}
+
+.box .keypad .number {
+
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 0 0.08em $numbers;
+
+    .letter {
+        font-size: 0.18em;
+        span {
+            position: relative;
+        }
+    }
+
+    &:nth-child(1){
+        top: 0.4em;
+        right: 0.8em;
+    }
+
+    &:nth-child(2){
+        top: 0.05em;
+        left: 2em;
+        span:nth-child(2) { top: -0.2em; } // B
+        span:nth-child(1) { top: -0.4em; } // A
+    }
+
+    &:nth-child(3){
+        top: 0.05em;
+        left: 1.25em;
+        span:nth-child(2) { top: -0.2em;  } // E
+        span:nth-child(3) { top: -0.36em; } // F
+    }
+
+    &:nth-child(4){
+        top: 0.3em;
+        left: 0.61em;
+        span:nth-child(3) { top: -0.5em; left: -0.5em; } // I
+        span:nth-child(2) { top: -0.1em; left: -0.4em; } // H
+        span:nth-child(1) { top: 0.5em;  left: -0.3em; } // G
+    }
+
+    &:nth-child(5){
+        top: 0.75em;
+        left: 0.2em;
+        span:nth-child(1) { top: -0.2em; left: 0.3em; } // L
+        span:nth-child(2) { top: 0.8em; left: -1.0em; } // K
+        span:nth-child(3) { top: 1.8em; left: -2.1em; } // J
+    }
+
+    &:nth-child(6){
+        top: 1.38em;
+        left: 0.1em;
+        span:nth-child(1) { top: 0.6em; left: -0.2em; } // M
+        span:nth-child(2) { top: 1.6em; left: -1.0em; } // N
+        span:nth-child(3) { top: 2.5em; left: -1.6em; } // O   
+    }
+
+    &:nth-child(7){
+        top: 1.95em;
+        left: 0.5em;
+        span:nth-child(1) { top: 1.2em; left: -0.4em; } //P
+        span:nth-child(2) { top: 1.9em; left: -0.6em; } //R
+        span:nth-child(3) { top: 2.5em; left: -0.6em; } //S
+    }
+
+    &:nth-child(8){
+        top: 2.25em;
+        left: 1.15em;
+        span:nth-child(1) { top: 1.9em; left: -0.3em; } //T
+        span:nth-child(2) { top: 2.2em; left: -0.2em; } //U
+        span:nth-child(3) { top: 2.4em; left: -0.2em; } //V
+    }
+
+    &:nth-child(9){
+        top: 2.28em;
+        left: 1.75em;
+        span:nth-child(1) { top: 2.3em; } //W
+        span:nth-child(2) { top: 2.1em; } //X
+        span:nth-child(3) { top: 2.0em; } //Y
+    }
+
+    &:nth-child(10){
+        top: 2.1em;
+        left: 2.28em;
+        span { font-size: 0.6em; }
+        @for $i from 1 through 4 {
+            span:nth-child(#{$i}) {
+                top: 4.6em - (0.4em * $i);
+                left: 1.5em - (0.13em * $i);
+            }
+        }
+        @for $i from 1 through 4 {
+            span:nth-child(#{$i + 4}) {
+                top: 3.2em - (0.65em * $i);
+                left: 1em - (0.2em * $i);
+            }
+        }
+        span:nth-child(5) { top: 2.45em; }
+    }
+
+}

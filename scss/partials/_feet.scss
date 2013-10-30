@@ -1,0 +1,21 @@
+.foot {
+
+    position: relative;
+    top: -0.1em;
+    width: 1em;
+    height: 0.8em;
+    z-index: -1;
+
+    margin-left: 1.2em;
+
+    background: $foot;
+    border-bottom-left-radius: 50% 25%;
+    border-bottom-right-radius: 50% 25%;
+
+    &.right {
+        float: right;
+        margin-top: -0.8em;
+        margin-right: 1.2em;
+    }
+
+}

@@ -1,0 +1,99 @@
+.bigclip { 
+
+    position: relative;
+    top: 5.3em;
+    left: 7em;
+
+    font-size: 0.3em;
+
+    -webkit-transform: rotate(20deg);
+    
+}
+
+.clip {
+
+    position: relative;
+    width: 2em;
+    height: 0.6em;
+    overflow: hidden;
+
+    box-shadow: 0 0.05em 0 #888;
+    border-bottom-left-radius: 0.2em;
+
+    -webkit-transform: skewX(-25deg);
+
+}
+
+.clip .rounded {
+
+    position: absolute;
+    width: 100%;
+    height: 0.3em;
+    bottom: 0;
+
+    background: #CCC;
+    background: -webkit-linear-gradient(0deg, #DDD 0%, #CCC 10%, #BBB 50%);
+
+    border-top-left-radius: 0.2em;
+    border-bottom-left-radius: 0.2em;
+    
+}
+
+.clip .radial {
+
+    position: absolute;
+    width: 1em;
+    top: 0.1em;
+    bottom: 0;
+    right: 0em;
+    
+    background: #CCC;
+    background: -webkit-radial-gradient(0% -100%, transparent 50%, #BBB 50%);
+
+    box-shadow: inset -0.25em 0 0.2em -0.2em #EEE;
+
+}
+
+.clip .oval {
+
+    position: absolute;
+    width: 0.5em;
+    height: 0.2em;
+    top: 0.02em;
+    right: -0.015em;
+    
+    border-radius: 50%;
+    background: #BBB;
+    box-shadow: inset -0.25em 0 0.2em -0.2em #EEE;
+
+}
+
+.bigclip .descender {
+
+    position: absolute;
+    width: 0.23em;
+    height: 0.5em;
+    top: 0.33em;
+    left: 1.87em;
+
+    background: -webkit-linear-gradient(-90deg, #DDD 0%, #AAA 40%, #888 100%);
+    -webkit-transform: skewY(-65deg);  
+
+    &:before { // Border-left alternative!
+
+        position: relative;
+        width: 0.05em;
+        height: 0.48em;
+        top: -0.03em;
+        left: -0.05em;
+        
+        display: block; // Pseudo-Element Fixes
+        content: '';
+        
+        
+        background: -webkit-linear-gradient(0deg, #CCC 0%, #777 100%);
+        -webkit-transform: skewY(65deg);
+
+    }
+
+}

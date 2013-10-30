@@ -1,0 +1,47 @@
+body {
+    
+    background: $background-color;
+
+}
+
+.rotaryphone {
+
+    margin: 20px auto;
+    font-size: 100px;
+    display: block;
+    max-width: 6.5em;
+    position: relative;
+
+}
+
+h1 {
+
+    margin: 10px 0;
+
+    font-family: 'Lato', 'Segoe UI Light', 'Segoe UI', 'Segoe', Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    color: #666;
+
+}
+
+h2 {
+
+    margin: 5px 0;
+
+    font-family: 'Lato', 'Segoe UI Light', 'Segoe UI', 'Segoe', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    color: #BFBFBF;
+
+    a {
+       text-decoration: none; 
+       color: #888;
+       &:hover { text-decoration: underline; }
+    }
+
+}

@@ -1,0 +1,67 @@
+.phone .bar {
+    width: $phoneSize;
+    height: 1.2em;
+    //background-color: #000;
+    border: 0.5em solid $phone;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    position: relative;
+    top: 0.1em;
+    margin: 0 auto;
+}
+
+.phone .bar-back {
+    margin-left: ($phoneSize + 0.1em) / 2em * -1em;
+    position: absolute;
+    top: -0.06em;
+    left: 50%;
+    width: $phoneSize + 0.1em;
+    height: 1em;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(lighten($phone, 60%)), color-stop(0.2, lighten($phone, 25%)), color-stop(0.67, lighten($phone, 8%)), color-stop(0.67, transparent), to(transparent));
+    background-image: -webkit-linear-gradient(lighten($phone, 60%) 0%, lighten($phone, 25%) 20%, lighten($phone, 8%) 67%, transparent 67%, transparent);
+    background-image: -moz-linear-gradient(lighten($phone, 60%) 0%, lighten($phone, 25%) 20%, lighten($phone, 8%) 67%, transparent 67%, transparent);
+    background-image: -o-linear-gradient(lighten($phone, 60%) 0%, lighten($phone, 25%) 20%, lighten($phone, 8%) 67%, transparent 67%, transparent);
+    background-image: linear-gradient(lighten($phone, 60%) 0%, lighten($phone, 25%) 20%, lighten($phone, 8%) 67%, transparent 67%, transparent);
+    border-top-left-radius: 50% 75%;
+    border-top-right-radius: 50% 75%;
+}
+
+.phone .bar .ear {
+    width: 1.5em;
+    height: 0.9em;
+    background-color: $phone;
+    float: left;
+    position: relative;
+    top: -0.06em;
+    left: -0.15em;
+
+    border-top-left-radius: 0.25em 1em;
+    border-top-right-radius: 0.25em 1em;
+    border-bottom-left-radius: 1em 0.25em;
+    border-bottom-right-radius: 1em 0.25em;
+
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from($phone), color-stop(0.59, $phone), color-stop(0.6, rgba(#CCC, 0.1)), color-stop(0.61, #000), color-stop(0.63, darken($phone, 5%)), color-stop(1, $phone));
+    background-image: -webkit-linear-gradient($phone 0%, $phone 59% rgba(#CCC, 0.1) 60%, #000 61%, darken($phone, 5%) 63%, $phone);
+    background-image: -moz-linear-gradient($phone 0%, $phone 59% rgba(#CCC, 0.1) 60%, #000 61%, darken($phone, 5%) 63%, $phone);
+    background-image: -o-linear-gradient($phone 0%, $phone 59% rgba(#CCC, 0.1) 60%, #000 61%, darken($phone, 5%) 63%, $phone);
+    background-image: linear-gradient($phone 0%, $phone 59% rgba(#CCC, 0.1) 60%, #000 61%, darken($phone, 5%) 63%, $phone);
+
+    &:last-child {
+        float: right;
+        left: 0;
+        margin-right: -0.15em;
+        -webkit-transform: rotate(5deg);
+        -moz-transform: rotate(5deg);
+        -ms-transform: rotate(5deg);
+        -o-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+}

@@ -1,0 +1,19 @@
+.spinner .light {
+
+    position: absolute; // Woo, absolute centering!
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;    
+    width: 1.4em;
+    height: 1.05em;
+    z-index: 1;
+
+    background: #fbf7dc;
+    background: -webkit-radial-gradient(center, ellipse cover, #f7f6f2 0%,#ffffff 62%,#f7f3dc 63%,#f9f8ef 100%);
+
+    border: 0.05em groove rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+
+    box-shadow: 0 0.01em 0.1em #f7f3dc;
+
+
+}
